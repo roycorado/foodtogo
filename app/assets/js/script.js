@@ -75,14 +75,6 @@ $(document).ready( () => {
 
 
 
-
-
-
-
-
-
-
-
 	$("#add_user").click( (e) => {
 		if(validate_registration_form()) {
 			let username = $("#username").val();
@@ -136,8 +128,7 @@ $(document).ready( () => {
 					window.location.replace("../views/home.php");
 				}
 			}
-		})
-
+		});
 
 	});
 
@@ -162,9 +153,9 @@ $(document).ready( () => {
 			"success" : (data) => {
 				$("#cart-count").html(data);
 			}
-		})
+		});
 
-	})
+	});
 
 
 

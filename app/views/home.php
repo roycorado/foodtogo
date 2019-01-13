@@ -7,8 +7,8 @@
 			<h1> Qrner Store </h1>
 			<p> Your favorite Qrner Store </p>
 			
-		</div>  
-	</div>
+		</div>  <!-- end jumbo -->
+	</div> <!--  end container -->
 
 
 

@@ -28,6 +28,7 @@
 				<?php } ?>
 			</ul>
 
+			<!-- set a get request on click of anchor tag -->
 			<h2> Sort </h2>
 			<ul class="list-group border">
 				<a href="../controllers/sort.php?sort=asc">
@@ -43,6 +44,7 @@
 			</ul>
 			
 		</div>   <!-- end of categories -->
+
 		<!-- items -->
 		<div class="col-sm-10">
 			<div class="container">
@@ -51,7 +53,7 @@
 					
 					// filter via category number
 					if(isset($_GET['category_id'])) {
-						$sql2 .=" WHERE category_id = ".$_GET['category_id'];
+						$sql2 .=" WHERE category_id =".$_GET['category_id'];
 					}
 
 					// display sorted items
@@ -76,20 +78,21 @@
 										<?php echo $item['price']; ?>											
 									</p>									
 								</div>	
+
 								<!-- add to cart -->
 								<div class="card-footer">
 									<input type="number" class="form-control" value="1">
 									<button type="submit" class="btn btn-block btn-outline-primary add-to-cart" data-id="<?php echo $item['id']; ?>"> Add to cart </button>
 								</div>							
-							</div>							
-						</div> <!-- end of card -->					
-					<?php } echo "</div>" ?>  <!-- end of items row -->
+							</div>	<!-- end of card -->								
+						</div> <!-- end of item column -->					
+					<?php } echo "</div>"; ?>  <!-- end of items row -->
 				
 			</div> <!-- end of items container -->			
-		</div>  		
-	</div>
-</div>
+		</div> <!--  end of items -->	
+	</div> <!--  end of row -->
+</div> <!--  end container -->
 
 
 
-<?php }; ?>
+<?php } ?>

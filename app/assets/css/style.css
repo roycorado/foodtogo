@@ -18,3 +18,10 @@
 .row + .row {
     border-top:0 ;
 }*/
+ 
+ .h3Sample2 {
+ 	text-align: center;
+ 	font-size: 100px;
+ 	font-family: Arial;
+ 	/*margin-top: 9vh;*/
+ }

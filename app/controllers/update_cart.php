@@ -14,7 +14,7 @@ session_start();
 		unset($_SESSION['cart'][$item_id]);
 	} else {
 		if(isset($_SESSION['cart'][$item_id])) {
-			//add as the new value
+			//add item_quantity as the new value
 			$_SESSION['cart'][$item_id] += $item_quantity;   // current quantity plus new quantity
 		} else {
 			// if there is no value, assign $item_quantity as the value to $_SESSION['cart'][$item_id]
