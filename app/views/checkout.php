@@ -11,20 +11,21 @@
 
 	 ?>
 
-	 <h1>This is the checkout page</h1>
+<div class="continer-fluid pt-4">
+	 <h1 class="text-center"> This is the checkout page </h1>
 
 	 <form method="POST" action="../controllers/placeorder.php">
 	 	<div class="container mt-4">
 	 		<div class="row">
 	 			<div class="col-8">
-	 				<h4>Shipping Address</h4>
+	 				<h4> Shipping Address </h4>
 		 			<div class="form-group">
 		 				<input type="text" class="form-control" name="addressLine1" value="<?php echo $_SESSION['user']['address']; ?>">
 		 			</div>
 	 			</div> <!-- end col -->
 	 		</div> <!-- end row -->
 			
-			<h4>Order Summary</h4>
+			<h4> Order Summary </h4>
 			<div class="row">
 				<div class="col-sm-6">
 					<p> Total </p>
@@ -68,10 +69,10 @@
 						<tbody>
 							<?php 
 							foreach ($_SESSION['cart'] as $id => $qty) {
-								$sql2 = "SELECT * FROM items WHERE id=$id";
-								$result2 = mysqli_query($conn, $sql2);
+								$sql2 = "SELECT * FROM items WHERE id=$id;";  //missing ;
+								$result = mysqli_query($conn, $sql2);
 								// var_dump($result2);
-								$item = mysqli_fetch_assoc($result2);
+								$item = mysqli_fetch_assoc($result);
 								// var_dump($item);
 							 ?>
 							<td class="text-center" colspan="2"><?php echo $item['name']; ?></td>
@@ -85,6 +86,6 @@
 			</div> <!-- end order summary row -->
 	 	</div> <!-- end container -->
 	 </form> <!-- end form -->
-
+</div>
 
 <?php } ?>

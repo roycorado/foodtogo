@@ -169,7 +169,7 @@ $(document).ready( () => {
 			let quantity = parseInt($(e.target).val());
 			let price = parseFloat($(e.target).parents('tr').find(".item_price").html());
 
-			subTotal = quantity * price;
+			let subTotal = quantity * price;
 			$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));
 
 			getTotal();

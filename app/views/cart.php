@@ -1,11 +1,9 @@
 <?php require_once '../partials/template.php'; ?>
 
 
-<?php function get_page_content() { ?>
 
-<?php require_once '../controllers/connect.php'; 
-	global $conn; //refers  the $conn outside the function
-?>
+
+<?php function get_page_content() { global $conn; ?>
 
 
 	<div class="container my-4">
@@ -44,12 +42,12 @@
 
 						?>
 						<tr>
-							<td class="item_name"> <?php echo $item['name']; ?></td>
-							<td class="item_price"> <?php echo $item['price']; ?></td>
+							<td class="item_name text-center"> <?php echo $item['name']; ?></td>
+							<td class="item_price text-center"> <?php echo $item['price']; ?></td>
 							<td class="item_quantity"> 
-								<input type="number" value="<?php echo $qty; ?>" class="form-control" data-id="<?php echo $id; ?>" min = "1" > 
+								<input type="number" value="<?php echo $qty; ?>" class="form-control text-right" data-id="<?php echo $id; ?>" min = "1" > 
 							</td>
-							<td class="item_subtotal"> <?php echo $subTotal; ?> </td>
+							<td class="item_subtotal text-center"> <?php echo $subTotal; ?> </td>
 							<td class="item_action text-center">
 								<button class="btn btn-danger item-remove" data-id="<?php echo $id; ?>"> Remove from cart </button>
 							</td>
@@ -59,10 +57,11 @@
 				<tfoot>
 					<tr>
 						<td class="text-right font-weight-bold" colspan="4"> Total </td>
-						<td class="text-right font-weight-bold" id="total_price"> <?php echo $cart_total; ?> 
+						<td class="text-right font-weight-bold" id="total_price"> 
+							<?php echo $cart_total; ?> 
 						</td>
 						<td class="text-center">
-							<a href="./checkout.php" class="btn btn-primary"> Proceed to checkout</a>							
+							<a href="./checkout.php" class="btn btn-primary"> Proceed to checkout </a>
 						</td>
 					</tr>
 				</tfoot>
@@ -70,7 +69,7 @@
 					} else {
 						echo '<tr>
 								<td class="text-center" colspan ="6"> No items in the cart </td>
-						</tr>
+							  </tr>
 						';
 					}
 				?>

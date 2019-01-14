@@ -17,7 +17,7 @@ session_start();
 			$update_flag = $_POST['update_from_cart_page'];
 			if ($update_flag == 0) {
 				//in catalog page add as there is an existing value
-				$_SESSION['cart']['$item_id'] += $item_quantity;
+				$_SESSION['cart'][$item_id] += $item_quantity;
 			} else {
 			//in cart page, reassign new value
 			$_SESSION['cart'][$item_id] = $item_quantity;   // current quantity plus new quantity
