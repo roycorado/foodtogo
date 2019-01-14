@@ -12,7 +12,7 @@
 
 		<form>
 			<div class="row top5">
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<div class="form-group">
 						<label for="firstname"> First Name</label>
 						<input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your first name here">
@@ -41,7 +41,7 @@
 				</div> <!-- end of left side -->
 				
 			
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<div class="form-group">
 						<label for="username"> Username </label>
 						<input type="text" id="username" name="username" class="form-control" placeholder="Enter your username here">

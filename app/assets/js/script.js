@@ -73,8 +73,6 @@ $(document).ready( () => {
 
 	}
 
-
-
 	$("#add_user").click( (e) => {
 		if(validate_registration_form()) {
 			let username = $("#username").val();
@@ -109,7 +107,7 @@ $(document).ready( () => {
 
 	});
 
-	// login and session
+	//login and session
 	$("#login").click( (e) => {
 		let username = $("#username").val();
 		let password = $("#password").val();
@@ -117,13 +115,13 @@ $(document).ready( () => {
 		$.ajax({
 			"url" : "../controllers/authenticate.php",
 			"method" : "POST",
-			"data" : {
-				'username' :username,
-				'password' :password
+			"data": {
+				'username':username,
+				'password':password
 			},
 			"success":(data) => {
 				if(data == "login_failed") {
-					$("#username").next().html("Please provide correct username");
+					$("#username").next().html("Please provide correct credentials");
 				} else {
 					window.location.replace("../views/home.php");
 				}
@@ -132,14 +130,14 @@ $(document).ready( () => {
 
 	});
 
-	// prep for add to cart
+	//prep for add to cart
 	$(document).on('click', '.add-to-cart', (e) => {
-		// to prevent default behavior and to override it with our own 
+		//to prevent default behavior and to override it with our own
 		e.preventDefault();
 		//prevent parent elements to be triggered
 		e.stopPropagation();
 
-		//target is the one who triggered the event
+		// target is the one who triggered event
 		let item_id = $(e.target).attr("data-id");
 		let item_quantity = parseInt($(e.target).prev().val());
 
@@ -148,14 +146,78 @@ $(document).ready( () => {
 			"method" : "POST",
 			"data" : {
 				'item_id':item_id,
-				'item_quantity' :item_quantity
+				'item_quantity':item_quantity,
+				'update_from_cart_page': 0
 			},
 			"success" : (data) => {
 				$("#cart-count").html(data);
 			}
 		});
 
+		});
+		function getTotal() {
+			let total = 0;
+			$(".item_subtotal").each(function(e) {
+				total += parseFloat($(this).html());
+			});
+			$("#total_price").html(total.toFixed(2));
+		}
+
+		//edit cart
+		$(".item_quantity>input").on("input", (e) =>{
+			let item_id = $(e.target).attr('data-id');
+			let quantity = parseInt($(e.target).val());
+			let price = parseFloat($(e.target).parents('tr').find(".item_price").html());
+
+			subTotal = quantity * price;
+			$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));
+
+			getTotal();
+
+			$.ajax({
+				"method": "POST",
+				"url" : "../controllers/update_cart.php",
+				"data" : {
+					'item_id':item_id,
+					'item_quantity':quantity,
+					'update_from_cart_page':1
+				},
+				"success": (data) => {
+					// alert(data);
+					$("#cart-count").html(data);
+				}
+			});
+
+
+		});
+	//delete button
+	$(document).on("click", '.item-remove', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+
+		let item_id = $(e.target).attr('data-id');
+
+		$.ajax({
+			"method":"POST",
+			"url":"../controllers/update_cart.php",
+			"data": {
+				'item_id':item_id,
+				'item_quantity':0
+			},
+			"beforeSend": () => {
+				return confirm("Are you sure you want to delete?");
+			},
+			"success": (data) => {
+				$(e.target).parents('tr').remove();
+				$("#cart-count").html(data);
+				getTotal();
+				window.location.replace("../views/cart.php"); //same as header but window.location is for javascript
+			}
+
+
+		});
 	});
+
 
 
 
