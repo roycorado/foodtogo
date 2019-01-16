@@ -16,6 +16,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="./catalog.php"> Catalog </a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./profile.php"> Profile </a>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link" href="../views/cart.php"> Cart <span class="badge bg-light text-dark" id="cart-count"> 

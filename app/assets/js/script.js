@@ -9,6 +9,33 @@ $(document).ready( () => {
 		let address = $("#address").val();
 
 
+	// 	function validate_new_item () {
+	// 	let errors = 0;
+	// 	let name = $(#name).val();
+	// 	let price = $(#price).val();
+	// 	let description = $(#description).val();
+	// 	let category = $(#category).val();
+	// 	let image = $(#image).val();
+
+	// 	if(!name != "") {
+	// 		$("#name").next().html("Please provide a name for your entry");
+	// 		errors++;
+	// 	} else {
+	// 		$("#address").next().html('');
+	// 	}
+
+	// 	if(!price != "") {
+	// 		$("#price").next().html("Please provide a name for your entry");
+	// 		errors++;
+	// 	} else {
+	// 		$("#address").next().html('');
+	// 	}
+
+
+	// }
+		
+		
+
 		//username should be greater than or equal to 10 chars
 		if(username.length < 10) {
 			$("#username").next().html("Username should be at least 10 characters");
@@ -216,11 +243,16 @@ $(document).ready( () => {
 
 
 		});
+	}); // end of button remove
+
+	// submit profile form updates
+	$('#update_info').click( () => {
+		// alert('hello');
+		$('#update_user_details').submit();
 	});
 
 
 
 
 
-
-});
+}); //end of document ready
