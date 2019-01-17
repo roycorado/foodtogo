@@ -5,7 +5,7 @@
 <?php $user = $_SESSION['user']; 
 	// var_dump($user);
 ?>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="list-group" id="list-tab" role="tablist">
@@ -51,6 +51,7 @@
 							</div>
 						</div>
 						<div class="table-responsive">
+						<!-- <div class="table table-responsive thead-dark table-striped table-bordered"> -->
 							<table class="table table-striped">
 								<thead>
 									<tr class="text-center">

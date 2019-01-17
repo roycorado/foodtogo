@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="#">
-			<i class="far fa-hand-peace"></i> Qrner Store
+			<i class="far fa-hand-peace"></i> Food-to-Go
 		</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
@@ -21,10 +21,6 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="./profile.php"> Profile </a>
-				</li>
-
-				<li class="nav-item">
 					<a class="nav-link" href="../views/cart.php"> Cart <span class="badge bg-light text-dark" id="cart-count"> 
 						<?php
 							if(isset($_SESSION['cart'])) {
@@ -42,6 +38,9 @@
 				<li class="nav-item">
 					<a href="./items.php" class="nav-link"> Items </a>
 				</li>
+				<li class="nav-item">
+					<a href="./users.php" class="nav-link"> Users </a>
+				</li>
 
 			<?php }; ?>
 
@@ -49,6 +48,10 @@
 
 				<li class="nav-item">
 					<a class="nav-link" href="./profile.php"> Welcome, <?php echo $_SESSION['user']['firstname']; ?> </a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="./profile.php"> Profile </a>
 				</li>
 
 				<li class="nav-item">
