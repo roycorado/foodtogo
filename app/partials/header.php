@@ -9,6 +9,9 @@
 
 		<div id="navbar-nav" class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
+				<?php if(!isset($_SESSION['user']) || (isset($_SESSION['user'])) && ($_SESSION['user']['roles_id'] ==2)) {
+					?>
+				
 				<li class="nav-item">
 					<a class="nav-link" href="./home.php"> Home </a>
 				</li>
@@ -16,6 +19,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="./catalog.php"> Catalog </a>
 				</li>
+
 				<li class="nav-item">
 					<a class="nav-link" href="./profile.php"> Profile </a>
 				</li>
@@ -34,7 +38,18 @@
 					</span> </a>
 				</li>
 
+			<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id']==1)) { ?>
+				<li class="nav-item">
+					<a href="./items.php" class="nav-link"> Items </a>
+				</li>
+
+			<?php }; ?>
+
 				<?php if(isset($_SESSION['user'])) { ?>
+
+				<li class="nav-item">
+					<a class="nav-link" href="./profile.php"> Welcome, <?php echo $_SESSION['user']['firstname']; ?> </a>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link" href="../controllers/logout.php"> Logout </a>

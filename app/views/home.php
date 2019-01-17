@@ -2,7 +2,7 @@
 
 <?php function get_page_content() { ?>
 
-<?php echo $_SESSION['user']['username']; ?> 
+
 	<div class="container-fluid">
 		<div class="jumbotron bg-dark mt-3 text-center text-white">
 			<h1> Qrner Store </h1>

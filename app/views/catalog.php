@@ -1,11 +1,10 @@
 <?php require_once '../partials/template.php'; ?>
 
 
-<?php function get_page_content() { ?>
-
-<?php require_once '../controllers/connect.php'; 
-	global $conn; //refers  the $conn outside the function
-?>
+<?php function get_page_content() { 
+	if(!isset($_SESSION['user']) || (isset($_SESSION['user'])) && $_SESSION['user']['roles_id'] == 2) {
+	global $conn; 
+	?>
 
 <div class="container">
 	<div class="row py-5">
@@ -92,7 +91,9 @@
 		</div> <!--  end of items -->	
 	</div> <!--  end of row -->
 </div> <!--  end container -->
-
-
+<?php } else {
+	header('Location: ./error.php');
+}
+?>
 
 <?php } ?>

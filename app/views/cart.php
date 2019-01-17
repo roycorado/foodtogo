@@ -3,7 +3,10 @@
 
 
 
-<?php function get_page_content() { global $conn; ?>
+<?php function get_page_content() { 
+	if(!isset($_SESSION['user']) || (isset($_SESSION['user'])) && $_SESSION['user']['roles_id'] == 2) {
+	global $conn; 
+	?>
 
 
 	<div class="container my-4">
@@ -78,7 +81,9 @@
 		</div>
 	</div> <!-- end container -->
 
-
-
+<?php } else {
+	header('Location: ./error.php');
+}
+?>
 
 <?php } ?>
