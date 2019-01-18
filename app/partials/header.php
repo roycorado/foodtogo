@@ -41,17 +41,15 @@
 				<li class="nav-item">
 					<a href="./users.php" class="nav-link"> Users </a>
 				</li>
-
+				<li class="nav-item">
+					<a class="nav-link" href="./orders.php"> Orders </a>
+				</li>
 			<?php }; ?>
 
 				<?php if(isset($_SESSION['user'])) { ?>
 
 				<li class="nav-item">
 					<a class="nav-link" href="./profile.php"> Welcome, <?php echo $_SESSION['user']['firstname']; ?> </a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="./profile.php"> Profile </a>
 				</li>
 
 				<li class="nav-item">

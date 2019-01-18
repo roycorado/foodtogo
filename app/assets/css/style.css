@@ -1,7 +1,12 @@
 .card-img-top {
     height: 130px;
     object-fit: cover;
-} 
+}
+
+.jumbotroncss {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}  
 
 
 .navbar-custom {

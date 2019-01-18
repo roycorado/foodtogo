@@ -1,9 +1,9 @@
 <?php 
 
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'ecom_db';
+$host = 'db4free.net';
+$username = 'qstorepart2';
+$password = 'Roy1204#';
+$dbname = 'ecom_database';
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
