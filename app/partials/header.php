@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="#">
-			<i class="far fa-hand-peace"></i> Food-to-Go
+			<i class="far fa-hand-peace"></i> Food-2-Go
 		</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
