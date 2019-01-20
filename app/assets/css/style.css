@@ -7,10 +7,6 @@
 }
 
 
-.card-img-top {
-    height: 130px;
-    object-fit: cover;
-}
 
 /*jumbotron styling*/
 .jumbotroncss {
@@ -84,7 +80,6 @@
     border-color: #030033;
 }
 /*end footer styling*/
-
 
 
 
