@@ -18,7 +18,7 @@
 		</div> <!-- end row -->
 		<hr>
 		<div class="table-responsive">
-			<table class="table table-striped table-bordered">
+			<table class="table table-bordered table-dark">
 				<thead>
 					<tr class="text-center">
 						<th> Item Name </th>
