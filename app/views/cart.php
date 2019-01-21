@@ -9,7 +9,7 @@
 	?>
 
 
-	<div class="container my-4">
+	<div class="container-fluid bgcart my-4">
 		<div class="row">
 			<div class="col-12">
 				<h1> Cart Page </h1>				
