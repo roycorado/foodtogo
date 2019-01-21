@@ -95,4 +95,14 @@
  	font-family: Arial;
  	/*margin-top: 9vh;*/
 }
+
+
+.bgcontainer {
+	background-image: url("../images/vegies.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
  

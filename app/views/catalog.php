@@ -6,7 +6,7 @@
 	global $conn; 
 	?>
 
-<div class="container">
+<div class="container bgcontainer">
 	<div class="row py-5">
 		<!-- categories -->
 		<div class="col-sm-2">
