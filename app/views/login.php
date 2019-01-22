@@ -2,7 +2,7 @@
 
 <?php function get_page_content() { ?>
 	
-	<div class="container">
+	<div class="container-fluid bglogin">
 		<div class="jumbotron bg-dark text-light text-center mt-5">
 			<h4>Login</h4>
 		</div> <!-- end jumbo -->

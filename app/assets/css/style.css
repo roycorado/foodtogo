@@ -114,5 +114,23 @@
     height: 100vh;
     width: 100%;
 }
-}
+
  
+.bglogin {
+    background-image: url("../images/vegies.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.bgregister {
+    background-image: url("../images/vegies1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}    
+}
