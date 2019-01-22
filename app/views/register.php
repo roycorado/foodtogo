@@ -13,8 +13,8 @@
 		<form>
 			<div class="row top5">
 				<div class="col-sm-6">
-					<div class="form-group">
-						<label for="firstname"> First Name</label>
+					<div class="form-group shadow-lg p-3 mb-5 bg-white rounded">
+						<label  for="firstname"> First Name</label>
 						<input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your first name here">
 						<span class="validation"></span>
 						
