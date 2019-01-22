@@ -5,7 +5,7 @@
 	global $conn; ?>
 
 
-	<div class="container-fluid bgregister">
+	<div class="container-fluid bgregister mt-0">
 		<div class="jumbotron bg-primary mt-3 text-center text-white">
 			<h1> Register </h1>	
 		</div>  <!-- end of jumbotron -->
