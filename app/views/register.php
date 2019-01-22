@@ -6,7 +6,7 @@
 
 
 	<div class="container-fluid bgregister p-3">
-		<div class="jumbotron bg-dark text-center text-white">
+		<div class="jumbotron bg-none text-center text-white">
 			<h1> Register </h1>	
 		</div>  <!-- end of jumbotron -->
 
