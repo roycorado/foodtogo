@@ -5,15 +5,15 @@
 	global $conn; ?>
 
 
-	<div class="container-fluid bgregister">
-		<div class="jumbotron bg-primary text-center text-white">
+	<div class="container-fluid bgregister p-3">
+		<div class="jumbotron bg-dark text-center text-white">
 			<h1> Register </h1>	
 		</div>  <!-- end of jumbotron -->
 
 		<form>
 			<div class="row top5">
 				<div class="col-sm-6">
-					<div class="form-group shadow-lg p-3 mb-5 bg-white rounded">
+					<div class="form-group shadow-lg p-3 mb-5 bg-success rounded">
 						<label  for="firstname"> First Name</label>
 						<input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your first name here">
 						<span class="validation"></span>
